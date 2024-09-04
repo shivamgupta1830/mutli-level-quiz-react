@@ -11,18 +11,18 @@ button {
   padding-inline: 10px;
   padding-block: 5px;
   margin-top: 10px;
-  background-color: rgb(104, 77, 9);
-  color: rgb(221, 204, 172);
+  background: transparent;
   border: 1px solid rgb(104, 77, 9);
+  color: rgb(104, 77, 9);
 
   cursor: pointer;
   border-radius: 5px;
   transition: all ease-in-out 0.25s;
 }
 button:hover {
-  background: transparent;
+  background-color: rgb(104, 77, 9);
+  color: rgb(221, 204, 172);
   border: 1px solid rgb(104, 77, 9);
-  color: rgb(104, 77, 9);
 }
 
 button:disabled {
@@ -36,9 +36,9 @@ button:disabled {
   width: 100%;
   min-height: 100vh;
   background-color: rgb(221, 204, 172);
+  padding-bottom: 25px;
 }
 
-/* HEADER CSS */
 .header {
   text-align: center;
   font-size: 2rem;
@@ -46,17 +46,18 @@ button:disabled {
   margin-top: -5%;
 }
 
-/* START SCREEN CSS */
-
 .start-screen,
 .final-screen {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 7.5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 10px;
+  background-color: rgb(221, 204, 172);
+  min-height: 100vh;
+  width: 100%;
 }
 
 .start-screen h1 {
@@ -67,25 +68,6 @@ button:disabled {
   font-size: 2rem;
 }
 
-/* .start-screen button {
-  font-size: 1.5rem;
-  padding-inline: 7.5px;
-  padding-block: 2.5px;
-  margin-top: 10px;
-  background: transparent;
-  border: 1px solid rgb(104, 77, 9);
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all ease-in-out 0.5s;
-} */
-
-/* .start-screen button:hover {
-  background-color: rgb(104, 77, 9);
-  color: rgb(221, 204, 172);
-} */
-
-/* QUESTION SCREEN */
-
 .question-screen {
   width: 75%;
   margin: auto;
@@ -95,15 +77,17 @@ button:disabled {
 .answer-form h3 {
   font-size: 1.5rem;
 }
-.single-answer-radio,
-.boolean-answer,
-.multiple-answer {
-  padding-block: 20px;
-  margin-left: 10px;
+
+.single-answer-radio {
+  padding-block: 5px;
+  margin-left: 2.5px;
   font-size: 1.25rem;
+  display: flex;
+  gap: 7.5px;
+  justify-content: start;
+  align-items: center;
 }
 
-.multiple-answer input[type="checkbox"],
 .boolean-answer input[type="radio"],
 .single-answer-radio input[type="radio"] {
   accent-color: rgb(104, 77, 9);
@@ -140,6 +124,7 @@ button:disabled {
   justify-content: center;
   align-items: start;
 }
+
 .message {
   display: flex;
   flex-direction: column;
@@ -149,4 +134,68 @@ button:disabled {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.level {
+  padding-inline: 10px;
+  padding-block: 5px;
+  background: rgb(104, 77, 9);
+
+  color: rgb(221, 204, 172);
+
+  border-radius: 5px;
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(221, 204, 172);
+  color: rgb(104, 77, 9);
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 750px) {
+  * {
+    font-size: 1rem;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .start-screen h1 {
+    font-size: 1.5rem;
+  }
+  .start-screen h2 {
+    font-size: 1.2rem;
+  }
+  button {
+    font-size: 0.75rem;
+  }
+  .boolean-answer input[type="radio"],
+  .single-answer-radio input[type="radio"] {
+    height: 12.5px;
+    width: 12.5px;
+  }
+}
+
+@media (max-width: 450px) {
+  * {
+    font-size: 0.9rem;
+  }
+  .header {
+    font-size: 1.25rem;
+  }
+  .start-screen h1 {
+    font-size: 1.25rem;
+  }
+  .start-screen h2 {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 0.6rem;
+  }
+  .boolean-answer input[type="radio"],
+  .single-answer-radio input[type="radio"] {
+    height: 10px;
+    width: 10px;
+  }
 }

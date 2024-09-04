@@ -1,11 +1,11 @@
 import "../../src/App.css";
 
-function StartScreen() {
+function StartScreen({ startQuiz }) {
   return (
     <div className="start-screen">
       <h1>Welcome to Multi-level quiz</h1>
       <h2>Click to start</h2>
-      <button>START</button>
+      <button onClick={startQuiz}>START</button>
     </div>
   );
 }
