@@ -78,7 +78,7 @@ function QuestionScreen({
       </form>
 
       <div className="message">
-        {level === "easy" && questionIndex == 1 && (
+        {!(level === "easy" && questionIndex == 0) && (
           <p>Last Response: {message}</p>
         )}
         <p>Score: {score}</p>
